@@ -1,3 +1,4 @@
+import React from 'react'
 import DateTime from '../DateTime/DateTime';
 import './BarraTopo.scss'
 

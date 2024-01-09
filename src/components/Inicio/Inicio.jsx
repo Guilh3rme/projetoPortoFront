@@ -1,3 +1,4 @@
+import React from 'react'
 import './Inicio.scss'
 import iconporto from '../../assets/icon-porto.png'
 import iconancora from '../../assets/icon-ancora.png'

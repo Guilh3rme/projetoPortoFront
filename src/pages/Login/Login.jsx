@@ -1,3 +1,4 @@
+import React from 'react'
 import './Login.scss'
 import foto from '../../assets/panorama-itaqui.jpg' 
 import logo from '../../assets/logo.png'

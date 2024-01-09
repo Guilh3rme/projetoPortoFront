@@ -1,3 +1,4 @@
+import React from 'react'
 import './BarraLateralBotao.scss'
 
 function BarraLateralBotao(props) {

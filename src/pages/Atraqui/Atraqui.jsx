@@ -1,3 +1,4 @@
+import React from 'react'
 import BarraLateral from "../../components/BarraLateral/BarraLateral";
 import { useState } from 'react'
 import BarraTopo from "../../components/BarraTopo/BarraTopo";
