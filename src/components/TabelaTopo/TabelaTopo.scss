@@ -1,0 +1,24 @@
+.topo-tabela {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 2px solid gray;
+    padding: 1rem 0;
+
+    #radio-topo {
+        border-radius: 5px;
+        background-color: red;
+    }
+    
+    .coluna-titulo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border: 1px solid red;
+        cursor: pointer;
+
+        i {
+            margin-left: 1rem;
+        }
+    }
+}

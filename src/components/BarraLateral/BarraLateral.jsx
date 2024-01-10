@@ -4,6 +4,13 @@ import { useNavigate } from "react-router-dom";
 import BarraLateralBotao from "./BarraLateralBotao";
 import './BarraLateral.scss'
 import logo from '../../assets/logo2.png'
+import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
+import AnchorRoundedIcon from '@mui/icons-material/AnchorRounded';
+import AccessAlarmRoundedIcon from '@mui/icons-material/AccessAlarmRounded';
+import PeopleRoundedIcon from '@mui/icons-material/PeopleRounded';
+import PostAddRoundedIcon from '@mui/icons-material/PostAddRounded';
+import DirectionsBoatFilledRoundedIcon from '@mui/icons-material/DirectionsBoatFilledRounded';
+import HelpOutlineRoundedIcon from '@mui/icons-material/HelpOutlineRounded';
 
 function BarraLateral(props) {
     /* ABRIR E FECHAR A BARRA LATERAL */
@@ -33,25 +40,25 @@ function BarraLateral(props) {
                 <div>
                     <div className="side-bar__menu">
                         <span onClick={() => {props.setWhichApp('Início'); selected(1);}}>
-                            <BarraLateralBotao text="Início" icon="fa-solid fa-house" uiOpen={props.uiOpen} number={1} isSelected={isSelected}/>
+                            <BarraLateralBotao text="Início" icon={<HomeRoundedIcon/>} uiOpen={props.uiOpen} number={1} isSelected={isSelected}/>
                         </span>
                         {<span onClick={() => {props.setWhichApp('Navios Atracados'); selected(2);}}>
-                            <BarraLateralBotao text="Navios Atracados" icon="fa-solid fa-anchor" uiOpen={props.uiOpen} number={2} isSelected={isSelected}/>
+                            <BarraLateralBotao text="Navios Atracados" icon={<AnchorRoundedIcon />} uiOpen={props.uiOpen} number={2} isSelected={isSelected}/>
                         </span>}
                         <span onClick={() => {props.setWhichApp('Fila de Atracação'); selected(3);}}>
-                            <BarraLateralBotao text="Fila de Atracação" icon="fa-solid fa-clock" uiOpen={props.uiOpen} number={3} isSelected={isSelected}/>
+                            <BarraLateralBotao text="Fila de Atracação" icon={<AccessAlarmRoundedIcon />} uiOpen={props.uiOpen} number={3} isSelected={isSelected}/>
                         </span>
                         <span onClick={() => {props.setWhichApp('Usuários'); selected(4);}}>
-                            <BarraLateralBotao text="Usuários" icon="fa-solid fa-users" uiOpen={props.uiOpen} number={4} isSelected={isSelected}/>
+                            <BarraLateralBotao text="Usuários" icon={<PeopleRoundedIcon />} uiOpen={props.uiOpen} number={4} isSelected={isSelected}/>
                         </span>
                         <span onClick={() => {props.setWhichApp('Requisições de Atracação'); selected(5);}}>
-                            <BarraLateralBotao text="Requisições de Atracação" icon="fa-regular fa-file-lines" uiOpen={props.uiOpen} number={5} isSelected={isSelected}/>
+                            <BarraLateralBotao text="Requisições de Atracação" icon={<PostAddRoundedIcon />} uiOpen={props.uiOpen} number={5} isSelected={isSelected}/>
                         </span>
                         <span onClick={() => {props.setWhichApp('Registro de Navios'); selected(6);}}>
-                            <BarraLateralBotao text="Registro de Navios" icon="fa-solid fa-ship" uiOpen={props.uiOpen} number={6} isSelected={isSelected}/>
+                            <BarraLateralBotao text="Registro de Navios" icon={<DirectionsBoatFilledRoundedIcon />} uiOpen={props.uiOpen} number={6} isSelected={isSelected}/>
                         </span>
                         <span onClick={() => {props.setWhichApp('Ajuda'); selected(7);}}>
-                            <BarraLateralBotao text="Ajuda" icon="fa-regular fa-circle-question" uiOpen={props.uiOpen} number={7} isSelected={isSelected}/>
+                            <BarraLateralBotao text="Ajuda" icon={<HelpOutlineRoundedIcon />} uiOpen={props.uiOpen} number={7} isSelected={isSelected}/>
                         </span>
                     </div>
                 </div>

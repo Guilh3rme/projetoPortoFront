@@ -61,6 +61,10 @@
 }
 
 @media screen and (max-width: 1255px) {
+    #barra-topo {
+        flex-direction: row-reverse;
+    }
+
     .titulo {
         display: none;
     }
