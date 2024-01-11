@@ -44,7 +44,7 @@ function Usuarios() {
 
     const addNewItem = () => {
         const newItem = {
-            imagem: 'url', // Replace with your image URL or any other default value
+            imagem: 'url',
             nome: 'João da Silva',
             data: 'alguma data',
             permissoes: 'alguma permissão',
@@ -52,13 +52,13 @@ function Usuarios() {
             status: 'Inativo',
         };
 
-        setData(prevData => [...prevData, newItem]); // Update state by spreading previous data and adding a new item
+        setData(prevData => [...prevData, newItem]); // Atualiza o state separando os dados e adicionando a nova linha.
     };
 
     return (
         <section id='usuarios'>
             <div className="topo">
-                <h4 className="topo-titulo">Todos (50)</h4>
+                <h4 className="topo-titulo">Todos ({data.length})</h4>
                 <span onClick={addNewItem}>
                     <BotaoAzul texto='Adicionar Usuário' icone = '+'/>
                 </span>
