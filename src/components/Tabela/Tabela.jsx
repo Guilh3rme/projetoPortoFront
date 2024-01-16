@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useState } from 'react';
 import { useTable, useSortBy, useGlobalFilter, usePagination } from 'react-table';
 import {
     Table,
@@ -49,6 +49,16 @@ const Tabela = ({ columns, data }) => {
     const { globalFilter, pageIndex } = state;
 
     const memoizedColumns = useMemo(() => columns, [columns]);
+
+    const [cor, setCor] = useState('')
+    const corFlag = (status) => {
+        switch (status) {
+            case "Ativo":   return "#35AADC";
+            case "Inativo": return "#DC3545";
+            case "Em espera":  return "#CBC424";
+            default:      return "#FFFFFF";
+        }
+    }
 
     return (
         <div>
@@ -132,12 +142,15 @@ const Tabela = ({ columns, data }) => {
                                 <TableRow {...row.getRowProps()}>
                                     {row.cells.map((cell) => (
                                         <TableCell {...cell.getCellProps()} align="left" >
-                                            
                                             {cell.column.Header === 'Imagem' && <span className='celula celula-imagem'>
                                                 <img src={row.values.imagem} alt="" />
                                             </span>}
 
-                                            {cell.column.Header === 'Status' && <span className='celula celula-grifada' style={row.values.status === 'Ativo' ? {backgroundColor: '#35AADC'} : {backgroundColor: '#DC3545'}}>
+                                            {/* {cell.column.Header === 'Status' && <span className='celula celula-grifada' style={row.values.status === 'Ativo' ? {backgroundColor: '#35AADC'} : {backgroundColor: '#DC3545'}}>
+                                                {cell.render('Cell')}
+                                            </span>} */}
+
+                                            {cell.column.Header === 'Status' && <span className='celula celula-grifada' style={{backgroundColor: corFlag(row.values.status)}}>
                                                 {cell.render('Cell')}
                                             </span>}
 
@@ -156,6 +169,23 @@ const Tabela = ({ columns, data }) => {
                                             {cell.column.Header === 'Berços Editáveis' && <span className='celula'>
                                                 {cell.render('Cell')}
                                             </span>}
+                                            
+                                            {cell.column.Header === 'Código' && <span className='celula'>
+                                                {cell.render('Cell')}
+                                            </span>}
+
+                                            {cell.column.Header === 'Nome do Navio' && <span className='celula'>
+                                                {cell.render('Cell')}
+                                            </span>}
+
+                                            {cell.column.Header === 'Data de Requisição' && <span className='celula'>
+                                                {cell.render('Cell')}
+                                            </span>}
+
+                                            {cell.column.Header === 'Operador Portuário' && <span className='celula'>
+                                                {cell.render('Cell')}
+                                            </span>}
+
                                         </TableCell>
                                     ))}
                                 </TableRow>

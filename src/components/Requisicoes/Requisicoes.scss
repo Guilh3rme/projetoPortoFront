@@ -1,0 +1,17 @@
+#requisicoes {
+    .topo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-left: 1.5rem;
+        margin-top: 1rem;
+
+        .topo-titulo {
+            margin-right: 1.5rem;
+        }
+    }
+    
+    .tabela {
+        margin: 1rem;
+    }
+}
