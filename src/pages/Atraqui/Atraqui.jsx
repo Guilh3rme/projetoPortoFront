@@ -6,6 +6,7 @@ import './Atraqui.scss'
 import Inicio from "../../components/Inicio/Inicio";
 import Usuarios from '../../components/Usuarios/Usuarios';
 import NaviosAtracados from '../../components/NaviosAtracados/NaviosAtracados';
+import { Ajuda } from "../../components/Ajuda/Ajuda";
 
 function Atraqui() {
     const [whichApp, setWhichApp] = useState('Início')
@@ -21,7 +22,8 @@ function Atraqui() {
                 {whichApp === 'Usuários' && <Usuarios />}
                 {whichApp === 'Requisições de Atracação' && <h1>REQUISIÇÕES DE ATRACAÇÃO</h1>}
                 {whichApp === 'Registro de Navios' && <h1>REGISTRO DE NAVIOS</h1>}
-                {whichApp === 'Ajuda' && <h1>AJUDA</h1>}
+                {whichApp === 'Ajuda' && <Ajuda />}
+
             </div>
         </>
     )
