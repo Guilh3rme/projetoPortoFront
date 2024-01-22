@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import './Usuarios.scss'
 import BotaoAzul from "../BotaoAzul/BotaoAzul";
 import Tabela from "../Tabela/Tabela";
+import Modal from "../Tabela/InputModal/InputModal"
 
 function Usuarios() {
     const columns = [
@@ -42,30 +43,47 @@ function Usuarios() {
         
     ]);
 
-    const addNewItem = () => {
-        const newItem = {
-            imagem: 'url',
-            nome: 'João da Silva',
-            data: 'alguma data',
-            permissoes: 'alguma permissão',
-            bercos: 'algum berço',
-            status: 'Inativo',
-        };
+    // const addNewItem = () => {
+    //     const newItem = {
+    //         imagem: 'url',
+    //         nome: 'João da Silva',
+    //         data: 'alguma data',
+    //         permissoes: 'alguma permissão',
+    //         bercos: 'algum berço',
+    //         status: 'Inativo',
+    //     };
 
-        setData(prevData => [...prevData, newItem]); // Atualiza o state separando os dados e adicionando a nova linha.
+    //     setData(prevData => [...prevData, newItem]); // Atualiza o state separando os dados e adicionando a nova linha.
+    // };
+
+    const [modalOpen, setModalOpen] = useState(false);
+
+    const addNewItem = (newItem) => {
+        setData(prevData => [...prevData, newItem]);
+    };
+
+    const handleAddItemClick = () => {
+        setModalOpen(true);
+        console.log('handleAddItemClick')
+    };
+
+    const handleCloseModal = () => {
+        setModalOpen(false);
+        console.log('handleCloseModal')
     };
 
     return (
         <section id='usuarios'>
             <div className="topo">
                 <h4 className="topo-titulo">Todos ({data.length})</h4>
-                <span onClick={addNewItem}>
+                <span onClick={handleAddItemClick}>
                     <BotaoAzul texto='Adicionar Usuário' icone = '+'/>
                 </span>
             </div>
             <div className="tabela">
                 <Tabela columns={columns} data={data} />
             </div>
+            <Modal open={modalOpen} onClose={handleCloseModal} onAddItem={addNewItem} />
         </section>
     )
 }

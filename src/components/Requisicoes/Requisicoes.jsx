@@ -28,9 +28,9 @@ function Requisicoes() {
     ];
 
     const [data, setData] = useState([
-        { codigo: '12345', nome: 'Teste', data: '09 de Setembro de 2023', operador: 'Wilson&Amp', status: 'Em espera'},
-        { codigo: '12345', nome: 'Toste', data: '09 de Setembro de 2023', operador: 'Wilson&Amp', status: 'Em espera'},
-        { codigo: '12345', nome: 'Tiste', data: '09 de Setembro de 2023', operador: 'Wilson&Amp', status: 'Em espera'},
+        { codigo: '12345', nome: 'Teste0', data: '09 de Setembro de 2023', operador: 'Wilson&Amp', status: 'Em espera'},
+        { codigo: '12345', nome: 'Teste1', data: '09 de Setembro de 2023', operador: 'Wilson&Amp', status: 'Em espera'},
+        { codigo: '12345', nome: 'Teste2', data: '09 de Setembro de 2023', operador: 'Wilson&Amp', status: 'Em espera'},
         
     ]);
 

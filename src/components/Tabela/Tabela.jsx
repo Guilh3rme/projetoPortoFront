@@ -169,7 +169,7 @@ const Tabela = ({ columns, data }) => {
                                             {cell.column.Header === 'Berços Editáveis' && <span className='celula'>
                                                 {cell.render('Cell')}
                                             </span>}
-                                            
+
                                             {cell.column.Header === 'Código' && <span className='celula'>
                                                 {cell.render('Cell')}
                                             </span>}
