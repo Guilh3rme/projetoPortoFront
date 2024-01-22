@@ -35,6 +35,23 @@ export function Ajuda() {
           <p> A sua opinião é muito importante </p>
         </div>
       </div>
+      <div className="area-atendimento">
+        <h1> Área de atendimento</h1>
+      </div>
+      <div className="opcoes-contato">
+        <div className="central-atendimento">
+          <h3> Central de Atendimento: </h3>
+          <p> <strong> (98) 3251-1234 </strong> </p>
+        </div>
+
+        <div className="email-contato">
+          <h3> E-mail de contato:  </h3>
+          <p> <strong> softwarehouse@gmail.com  </strong></p>
+        </div>
+
+      </div>
+
+
     </>
 
 
