@@ -28,27 +28,11 @@
   display: flex;
   align-items: center;
   flex-direction: row;
-  padding: 1rem;
-  gap: 2rem;
-
+  gap: 5rem;
+  padding: 2rem 2rem 2rem 3rem;
 }
 
-.primeirosPassos {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(35, 62, 174, 1);
-  color: white;
-
-  border-radius: 5px;
-  gap: 0.5rem;
-  max-width: 1136px;
-  width: 385px;
-  height: 233px;
-}
-
-.atualizacoes {
+.container-ajuda {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -57,23 +41,9 @@
   color: white;
   border-radius: 5px;
   gap: 0.5rem;
-  max-width: 1136px;
   width: 385px;
   height: 233px;
-}
-
-.avalieAqui {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(35, 62, 174, 1);
-  color: white;
-  gap: 0.5rem;
-  border-radius: 5px;
-  max-width: 1136px;
-  width: 385px;
-  height: 233px;
+  padding: 1rem 0 1rem 0;
 }
 
 .area-atendimento {
@@ -92,15 +62,9 @@
   gap: 7rem;
   padding-top: 1.5rem;
   text-align: center;
-  padding-bottom: 1rem;
-
+  margin: 1rem;
 }
 
 .opcoes-contato p {
   color: rgba(35, 62, 174, 1);
 }
-
-
-// .central-atendimento {
-//   display: block;
-// }

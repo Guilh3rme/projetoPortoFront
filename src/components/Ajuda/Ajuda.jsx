@@ -17,19 +17,19 @@ export function Ajuda() {
 
 
       <div className="BotoesAjuda">
-        <div className="primeirosPassos">
+        <div className="container-ajuda">
           <EditNoteOutlinedIcon sx={{ fontSize: 50 }} />
           <h2> Primeiros passos</h2>
           <p> Configurações básicas e dicas iniciais </p>
         </div>
 
-        <div className="atualizacoes">
+        <div className="container-ajuda">
           <SettingsOutlinedIcon sx={{ fontSize: 50 }} />
           <h2> Atualizações</h2>
           <p> Acompanhe as novidades e atualizações </p>
         </div>
 
-        <div className="avalieAqui">
+        <div className="container-ajuda">
           <SentimentSatisfiedAltIcon sx={{ fontSize: 50 }} />
           <h2> Avalie aqui</h2>
           <p> A sua opinião é muito importante </p>
